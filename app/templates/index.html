@@ -1,0 +1,54 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="{% static 'site.css' %}" rel="stylesheet">
+</head>
+
+<body class="container center">
+<h1>Calculator App</h1>
+
+<form class="form-inline center">
+
+  <div class="form-group">
+    <label for="first_number_input"> First Number: </label>
+    <input type="number" class="form-control" id="first_number_input" name="first_number_input" placeholder="Input a number">
+  </div>
+
+    <br>
+    <br>
+
+    <div>
+    <label for="operation_input"> Operation: <br>
+       <select class="form-control">
+           <option>+ (add)</option>
+           <option>- (subtract)</option>
+           <option>x (multiply)</option>
+           <option>/ (divide)</option>
+       </select></label>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label for="second_number_input"> Second Number: </label>
+        <input type="number" class="form-control" id="second_number_input" name="second_number_input" placeholder="Input a number">
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+    <button type="submit" class="btn btn-default ">Equals</button>
+    </div>
+</form>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
