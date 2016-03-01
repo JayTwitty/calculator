@@ -5,10 +5,10 @@ import operator
 def index_view(request):
     print(request.POST)
     try:
-        if request.method == "POST":
-            first_number_input = float(request.POST.get('first_number_input'))
-            second_number_input = float(request.POST.get('second_number_input'))
-            operation = request.POST.get("operator")
+        if request.POST:
+            first_number_input = float(request.POST['first_number_input'])
+            second_number_input = float(request.POST['second_number_input'])
+            operation = request.POST["operator"]
 
             if operation == "+ (add)":
                 answer = operator.add(first_number_input, second_number_input)
@@ -23,7 +23,7 @@ def index_view(request):
                 try:
                     answer = operator.truediv(first_number_input, second_number_input)
                 except ZeroDivisionError:
-                    answer = "Can't Divide by Zero"
+                    answer = "Answer is Undefined (You can't divide by zero)"
                 operation = "/"
             return render(request, 'index.html', {'answer': answer,
                                                   'operation': operation,

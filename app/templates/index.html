@@ -14,12 +14,16 @@
 <h1>Django Calculator</h1>
 <div class="panel panel-success">
   <div class="panel-heading">
-    <h3 class="panel-title center"><em>"Enter Two numbers and select an Operator to Generate an Answer"</em></h3>
+    <h3 class="panel-title center"><strong>Enter Two numbers and select an Operator to Generate an Answer</strong></h3>
+      <br>
+          <h3 class="panel-title center"><em>***<u>Note</u>: Answers will auto-populate in First Number box to perform chain operations</em></h3>
+
   </div>
   <div class="panel-body center">
-      Use Numbers only as Invalid Entries will cause Invalid Results.
+      Only use Numbers as Invalid Entries will generate Invalid Results.
   </div>
 </div>
+<br>
 <form method = "post" class="form-inline center">
 {% csrf_token %}
   <div class="form-group">
@@ -57,6 +61,7 @@
 <br>
 <div>Answer: </div>
 <div>{{ first_number }} {{ operation }} {{ second_number }} = {{ answer }}</div>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 </html>
