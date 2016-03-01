@@ -11,8 +11,15 @@
 </head>
 
 <body class="container center">
-<h1>Calculator App</h1>
-
+<h1>Django Calculator</h1>
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title center"><em>"Enter Two numbers and select an Operator to Generate an Answer"</em></h3>
+  </div>
+  <div class="panel-body center">
+      Use Numbers only as Invalid Entries will cause Invalid Results.
+  </div>
+</div>
 <form method = "post" class="form-inline center">
 {% csrf_token %}
   <div class="form-group">
